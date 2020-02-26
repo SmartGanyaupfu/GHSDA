@@ -1,0 +1,11 @@
+<div class="card" >
+  <div class="card-img-wrapper">
+    <img class="card-img-top" [src]="blog.image.source_url" alt="Card image">
+  </div>
+  
+  <div class="card-body p-1">
+    <h4 class="card-title mb-1" [innerHtml]="blog.title.rendered | safe: 'html'"></h4>
+    <p class="card-text mb-1" [innerHtml]="blog.excerpt.rendered | safe: 'html'"></p>
+    <a [routerLink]="['/blog/', blog.id]" class="btn btn-primary">See Profile</a>
+  </div>
+</div>
